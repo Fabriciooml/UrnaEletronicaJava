@@ -1,7 +1,7 @@
 public class main {
     public static void main(String[] args) {
         Eleicao eleicao = new Eleicao();
-        eleicao.adicionaCandidato("Ford Prefect", "1", 42, "GMG");
+        Candidato candidato1 = eleicao.adicionaCandidato("Ford Prefect", "89082448670", 42, "GMG");
         eleicao.adicionaCandidato("Sherlock Holmes", "2", 221, "SH");
         eleicao.adicionaCandidato("David Tennant", "3", 10, "DW");
 
@@ -22,5 +22,6 @@ public class main {
         eleicao.contabilizaVotos();
 
         System.out.println(eleicao);
+        System.out.println(candidato1.isCpfValido());
     }
 }
