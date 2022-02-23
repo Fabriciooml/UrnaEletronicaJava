@@ -1,3 +1,9 @@
+package test;
+
+import models.Candidato;
+import models.Eleicao;
+import models.Eleitor;
+
 public class main {
     public static void main(String[] args) {
         Eleicao eleicao = new Eleicao();

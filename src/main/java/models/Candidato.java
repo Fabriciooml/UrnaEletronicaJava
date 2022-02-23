@@ -1,4 +1,5 @@
-import java.util.InputMismatchException;
+package models;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -36,17 +37,6 @@ public class Candidato extends Pessoa{
 
     public void adicionaVoto() {
         this.numeroVotos += 1;
-    }
-
-    @Override
-    public String toString() {
-        return "Candidato{" +
-                "nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", numeroCandidato=" + numeroCandidato +
-                ", partido='" + partido + '\'' +
-                ", numeroVotos=" + numeroVotos +
-                '}';
     }
 
     public boolean isCpfValido() {
@@ -88,4 +78,16 @@ public class Candidato extends Pessoa{
             return(true);
         else return(false);
     }
+
+    @Override
+    public String toString() {
+        return "models.Candidato{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", numeroCandidato=" + numeroCandidato +
+                ", partido='" + partido + '\'' +
+                ", numeroVotos=" + numeroVotos +
+                '}';
+    }
+
 }

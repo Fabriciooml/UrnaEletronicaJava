@@ -1,3 +1,5 @@
+package models;
+
 public class Eleitor extends Pessoa {
     private String tituloEleitor;
     private boolean Votou;
