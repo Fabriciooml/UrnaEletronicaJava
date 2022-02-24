@@ -28,6 +28,6 @@ public class main {
         eleicao.contabilizaVotos();
 
         System.out.println(eleicao);
-        System.out.println(candidato1.isCpfValido());
+        candidato1.isCpfValido();
     }
 }

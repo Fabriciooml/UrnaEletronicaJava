@@ -42,8 +42,10 @@ public class Candidato extends Pessoa{
     public boolean isCpfValido() {
         Pattern pattern = Pattern.compile("^(.)\\1{10}");
         Matcher matcher = pattern.matcher(cpf);
-        if (matcher.find() || (cpf.length() != 11))
-            return(false);
+        if (matcher.find() || (cpf.length() != 11)) {
+            System.out.println("CPF invalido");
+            return (false);
+        }
 
         char dig10, dig11;
         int sm, i, r, num, peso;
@@ -74,9 +76,14 @@ public class Candidato extends Pessoa{
             dig11 = '0';
         else dig11 = (char)(r + 48);
 
-        if ((dig10 == cpf.charAt(9)) && (dig11 == cpf.charAt(10)))
-            return(true);
-        else return(false);
+        if ((dig10 == cpf.charAt(9)) && (dig11 == cpf.charAt(10))) {
+            System.out.println("CPF valido");
+            return (true);
+        }
+        else {
+            System.out.println("CPF invalido");
+            return (false);
+        }
     }
 
     @Override
